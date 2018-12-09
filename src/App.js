@@ -16,7 +16,6 @@ class App extends Component {
     fetch("/.netlify/functions/" + api)
       .then(response => response.json())
       .then(json => {
-        console.log(json);
         this.setState({ loading: false, msg: json.msg });
       });
   };
@@ -27,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <button
-          className="btn btn-dark m-1"
+          className="btn btn-dark m-1 mt-5"
           onClick={this.handleClick("getusers")}
         >
           {loading ? "Loading..." : "Get Github users"}

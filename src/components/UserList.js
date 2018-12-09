@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 
 import UserCard from "./UserCard";
 
-const UserList = props => {
-  const users = props.users;
-
+const UserList = ({ users }) => {
   const usersList = users.map(user => (
     <UserCard
       key={user.id}
